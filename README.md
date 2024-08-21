@@ -1,0 +1,2 @@
+# Gashapon
+扭蛋
