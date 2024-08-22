@@ -1,0 +1,5 @@
+Flask==2.3.3
+PyYAML==6.2
+Flask-SocketIO==5.3.3  # 支持WebSocket的Flask扩展
+eventlet==0.33.0       # 支持长连接和WebSocket
+

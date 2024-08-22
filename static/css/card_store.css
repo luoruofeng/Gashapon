@@ -1,0 +1,96 @@
+/* 全局样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* 设置背景颜色，以防图片未加载时显示 */
+}
+
+/* 导航栏样式 */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+}
+
+/* 图片列表样式 */
+.position-relative {
+    padding: 10px;
+}
+
+.position-relative img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 图片背景外框样式 */
+.position-relative > div {
+    border-radius: 12px;
+    border: 2px solid #dee2e6;
+}
+
+/* 按钮样式 */
+#startButton {
+    width: 150px;
+    height: 80px;
+    font-size: 1.5rem;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: transparent; /* 背景图片替代颜色 */
+}
+
+#startButton:hover {
+    filter: brightness(1.2); /* 提亮效果 */
+}
+
+/* 卡哇伊风格表单样式 */
+.modal-content {
+    background-color: #fff; /* 背景图片作为主要样式 */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+    font-size: 1.75rem;
+    color: #ff69b4; /* 卡哇伊粉色 */
+}
+
+.form-label {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #ff69b4; /* 焦点时卡哇伊粉色 */
+    box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
+.btn-primary {
+    background-color: #ff69b4;
+    border-color: #ff69b4;
+    border-radius: 8px;
+    font-size: 1.25rem;
+}
+
+.btn-primary:hover {
+    background-color: #ff85c4;
+    border-color: #ff85c4;
+}
+
+.card-item {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+

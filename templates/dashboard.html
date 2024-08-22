@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                Dashboard
+                            </a>
+                        </li>
+                        <!-- 其他导航项 -->
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Dashboard</h1>
+                </div>
+
+                <div class="row">
+                    <!-- 卡片1 -->
+                    <div class="col-md-4">
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-header">总用户数</div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ total_users }}</h5>
+                                <p class="card-text">系统中注册的总用户数量</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 卡片2 -->
+                    <div class="col-md-4">
+                        <div class="card text-white bg-success mb-3">
+                            <div class="card-header">今日活跃用户</div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ active_users_today }}</h5>
+                                <p class="card-text">今日登录系统的用户数量</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 卡片3 -->
+                    <div class="col-md-4">
+                        <div class="card text-white bg-warning mb-3">
+                            <div class="card-header">今日销售额</div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ sales_today }}</h5>
+                                <p class="card-text">今日的总销售额</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 其他内容 -->
+            </main>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

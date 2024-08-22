@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gashapon Machine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gashapon.css') }}">
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gashapon.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ws.js') }}"></script>
+</head>
+<body style="background-image: url('{{ config['background_image'] }}');">
+
+    <!-- 显示剩余次数和用户上传的图片 -->
+    <div class="status-bar">
+        <span id="remaining-times">剩余次数: 0</span>
+        <img id="user-image" src="" alt="User Image">
+    </div>
+
+    <!-- 中央的开始按钮 -->
+    <div class="gashapon-container">
+        <img id="start-button" src="{{ url_for('static', filename='img/start_button.png') }}" alt="Start">
+    </div>
+
+    <!-- 动态显示的圆形图片 -->
+    <div id="image-circle" class="image-circle">
+        {% for key, image in images.items() %}
+        <div class="circle-image-container" id="image-{{ key }}">
+            <img src="{{ image }}" class="circle-image">
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- 抽奖结果显示 -->
+    <div id="result-display" class="result-display"></div>
+
+    <!-- 表单模态框 -->
+    <div id="form-modal" class="modal">
+        <div class="modal-content">
+            <form id="lottery-form">
+                <div class="form-group">
+                    <label for="times">抽奖次数:</label>
+                    <input type="number" id="times" name="times" class="form-control" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="image-upload">上传图片:</label>
+                    <input type="file" id="image-upload" name="image-upload" class="form-control-file">
+                </div>
+                <button type="submit" class="btn btn-primary">确定</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
