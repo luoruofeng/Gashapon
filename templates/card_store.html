@@ -39,7 +39,7 @@
             {% for id, image_path in images.items() %}
             <div class="col-md-2 mb-0 text-center position-relative">
                 <!-- 背景图片 -->
-                <div style="background-image: url('{{ url_for('static', filename='img/green_border.png') }}'); 
+                <div class="card-item-effect" style="background-image: url('{{ url_for('static', filename='img/green_border.png') }}'); 
                             width: calc(100% + 2px); 
                             height: calc(100% + 2px); 
                             background-size: contain;
@@ -87,6 +87,7 @@
         </div>
     </div>
 
+    <script src="{{ url_for('static', filename='js/card_light_effect.js') }}"></script>
     <script src="{{ url_for('static', filename='js/card_store.js') }}"></script>
 </body>
 </html>
